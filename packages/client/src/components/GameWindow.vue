@@ -30,7 +30,7 @@ const renderedLines = computed(() => {
   else lines = [String(props.content)]
 
   if (props.simpleMarkup) {
-    return lines.map(ln => escapeHtml(ln)
+    return lines.map(line => escapeHtml(line)
         .replace(/\[b\](.*?)\[\/b\]/gi, '<strong>$1</strong>')
         .replace(/\[i\](.*?)\[\/i\]/gi, '<em>$1</em>')
         .replace(/\[red\](.*?)\[\/red\]/gi, '<span class="ansi-red">$1</span>')
